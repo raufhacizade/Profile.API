@@ -87,7 +87,7 @@ namespace Profile.API.Controllers
       return Ok();
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(int id)
     {
       var userEntity = await _userService.Get(id);
